@@ -1,9 +1,8 @@
 {
   "rules": {
-    "indent": [ 2, 2, {"SwitchCase": 1} ],
-    "quotes": [ 2, "double", "avoid-escape" ],
-    "linebreak-style": [ 2, "unix" ],
-    "semi": [ 2, "always" ],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "quotes": [2, "double", "avoid-escape"],
+    "semi": [2, "always"],
     "no-console": 0
   },
   "env": {
@@ -13,11 +12,6 @@
     "sourceType": "module",
     "ecmaVersion": 7
   },
-  "plugins": [
-    "lodash-fp"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:lodash-fp/recommended"
-  ]
+  "plugins": ["lodash-fp"],
+  "extends": ["eslint:recommended", "plugin:lodash-fp/recommended"]
 }

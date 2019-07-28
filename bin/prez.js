@@ -10,6 +10,7 @@ var serve = require("../lib/serve");
 var { notify, warn } = require("../lib/notify");
 var fs = require("fs-extra");
 var path = require("path");
+//var console = require("console");
 
 if (args.h || args.help) {
   cli.help();
@@ -57,6 +58,7 @@ if (args.print && !args.serve) {
   args.killServerAfterPrint = true;
 }
 
+console.log("Building using patched Prez!");
 build(from, to, cli.options(args), notify);
 
 if (args.serve) {

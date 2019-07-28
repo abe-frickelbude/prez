@@ -1,7 +1,17 @@
 {
   "name": "prez",
-  "version": "4.7.0",
+  "version": "4.7.42",
   "description": "Generate Reveal.js slideshows",
+  "author": "Nicolas Chambrier <naholyr@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byteclubfr/prez.git"
+  },
+  "bugs": {
+    "url": "https://github.com/byteclubfr/prez/issues"
+  },
+  "homepage": "https://github.com/byteclubfr/prez",
   "main": "index.js",
   "bin": {
     "prez": "bin/prez.js"
@@ -26,20 +36,6 @@
     "tiny-lr": "^1.0.5",
     "update-notifier": "^2.3.0"
   },
-  "scripts": {
-    "lint": "eslint lib bin",
-    "test": "ava"
-  },
-  "author": "Nicolas Chambrier <naholyr@gmail.com>",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/byteclubfr/prez.git"
-  },
-  "bugs": {
-    "url": "https://github.com/byteclubfr/prez/issues"
-  },
-  "homepage": "https://github.com/byteclubfr/prez",
   "devDependencies": {
     "ava": "^0.22.0",
     "eslint": "^4.8.0",
@@ -47,5 +43,16 @@
   },
   "optionalDependencies": {
     "marked": "^0.3.5"
+  },
+  "ava": {
+    "source": "test/**/*.js",
+    "concurrency": 8,
+    "failFast": false,
+    "verbose": false
+  },
+  "scripts": {
+    "lint": "eslint lib bin",
+    "test": "ava -v",
+    "tdd": "ava --watch"
   }
 }
